@@ -16,11 +16,14 @@ class BookShelf extends Component {
         <h2 className="bookshelf-title">{this.props.title}</h2>
         <div className="bookshelf-books">
           <ol className="books-grid">
-            {books.title((book) =>
+            console.log(this.prop.book.maps(book =>
               <li key={book.id}>
-                  <Book book={book} onShelfChange={changeBookself} />
+                    <Book book={book}
+                      BookShelf={BookShelf}
+                      changeBookShelf={changeBookShelf}
+                    />
               </li>
-            )}
+            ))}
           </ol>
         </div>
       </div>
